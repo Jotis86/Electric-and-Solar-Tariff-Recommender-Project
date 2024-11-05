@@ -502,17 +502,19 @@ elif seccion == "Recomendador Placas Solares":
 
         # Función para leer datos horarios por provincia
         def leer_datos_horarios(ciudad):    
-            #df = pd.read_csv("datos_provincias.csv")
-            #df = pd.read_csv("./datos_provincias.csv")
-            #df = pd.read_csv("/mount/src/data-wrangling-project/streamlit_app/datos_provincias.csv")
             
-              # Verificar la existencia de 'datos_provincias.csv' en la ruta de Streamlit Cloud o local
-            if os.path.exists("/mount/src/data-wrangling-project/streamlit_app/datos_provincias.csv"):
-            # Ruta en Streamlit Cloud
-                df = pd.read_csv("/mount/src/data-wrangling-project/streamlit_app/datos_provincias.csv")
-            else:
-            # Ruta en local
-                df = pd.read_csv("datos_provincias.csv")
+            # Obtener la ruta absoluta del directorio actual
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.join(current_dir, "datos_provincias.csv")
+
+            try:
+                df = pd.read_csv(file_path)
+            except FileNotFoundError:
+                st.error(f"El archivo no se encuentra en la ruta especificada: {file_path}")
+                return None
+            except Exception as e:
+                st.error(f"Ocurrió un error al intentar leer el archivo: {e}")
+                return None
 
             df.columns = ['Dia', 'Ciudad', 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto',
             'septiembre', 'octubre', 'noviembre', 'diciembre']
@@ -574,8 +576,6 @@ elif seccion == "Recomendador Placas Solares":
             # TARIFA SOLAR
             # Una vez conocidos los consumos con las placas, obtenemos el precio con las tarifas solares:
             #df_solar = pd.read_csv("tarifas_solar.csv")
-            df_solar = pd.read_csv("/mount/src/data-wrangling-project/streamlit_app/tarifas_solar.csv")
-
 
             def calcular_mejor_tarifa(consumo):
                 # Parámetros
@@ -587,11 +587,16 @@ elif seccion == "Recomendador Placas Solares":
                 #df = pd.read_csv("tarifas_solar.csv")
                 #df_solar = pd.read_csv("/mount/src/data-wrangling-project/streamlit_app/tarifas_solar.csv")
 
-                # Ruta condicional para cargar el archivo
-                if os.path.exists("/mount/src/data-wrangling-project/streamlit_app/tarifas_solar.csv"):
-                    df_solar = pd.read_csv("/mount/src/data-wrangling-project/streamlit_app/tarifas_solar.csv")
-                else:
-                    df_solar = pd.read_csv("tarifas_solar.csv")  # Ruta local
+                # Obtener la ruta absoluta del directorio actual
+                current_dir = os.path.dirname(os.path.abspath(__file__))
+                file_path = os.path.join(current_dir, "tarifas_solar.csv")
+
+                try:
+                    df_solar = pd.read_csv(file_path)
+                except FileNotFoundError:
+                    st.error(f"El archivo no se encuentra en la ruta especificada: {file_path}")
+                except Exception as e:
+                    st.error(f"Ocurrió un error al intentar leer el archivo: {e}")
 
                 # Crear un DataFrame con los resultados
                 resultado_df = df_solar[['Empresa', 'Tarifa']].copy()
