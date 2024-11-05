@@ -1,0 +1,4 @@
+Empresa,Tarifa,Descripción,Punta,Llano,Valle,P1,P3,Excedentes,Coste de gestión,Bateria
+Naturgy,Solar,0,0.17,0.1162,0.0821,0.103663,0.034042,0.11,0.0,0.0
+Octopus,Octopus Solar,Precio fijo para cada periodo,0.171,0.123,0.075,0.089,0.026,0.05,0.0,0.0
+Repsol,Tarifa Placa Solar,Precio de la energía y término fijo,0.139746,0.139746,0.139746,0.068219,0.068219,0.08,0.0,1.8

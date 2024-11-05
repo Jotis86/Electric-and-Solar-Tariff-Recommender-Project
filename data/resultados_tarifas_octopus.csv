@@ -1,0 +1,5 @@
+Título,Descripción,Energía Punta,Energía Llano,Energía Valle,Potencia Punta,Potencia Valle,Compensación Excedentes
+Octopus Relax,Mismo precio las 24 horas,"0,115 €/kWh",No encontrado,No encontrado,"0,089 €/kW/día","0,026 €/kW/día",
+Octopus 3,Precio fijo para cada periodo,"0,174 €/kWh","0,107 €/kWh","0,083 €/kWh","0,089 €/kW/día","0,026 €/kW/día",
+Octopus Flexi,Tarifa a precio de mercado,"0,181 €/kWh","0,118 €/kWh","0,085 €/kWh","0,083 €/kW/día","0,018 €/kW/día",
+Octopus Solar,Precio fijo para cada periodo,"0,171 €/kWh","0,123 €/kWh","0,075 €/kWh","0,089 €/kW/día","0,026 €/kW/día","+0,05 €/kWh"

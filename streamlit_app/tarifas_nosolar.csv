@@ -1,0 +1,13 @@
+Empresa,Tarifa,Descripción,Punta,Llano,Valle,P1,P3,Coste de gestión
+Naturgy,Por uso de Luz,"La energía que consumes  siempre al mismo precio, las 24h, todos los días de las semana. Precio estable durante 12 meses.",0.1149,0.1149,0.1149,0.103663,0.034042,0.0
+Naturgy,Noche Luz,"Un precio diferente por cada tramo horario de Punta, Llano y Valle. Aprovecha cuando el precio es más bajo y ahorra.",0.17,0.1162,0.0821,0.103663,0.034042,0.0
+Octopus,Octopus Relax,Mismo precio las 24 horas,0.115,0.115,0.115,0.089,0.026,0.0
+Octopus,Octopus 3,Precio fijo para cada periodo,0.174,0.107,0.083,0.089,0.026,0.0
+Octopus,Octopus Flexi,Tarifa a precio de mercado,0.181,0.118,0.085,0.083,0.018,0.0
+Repsol,Tarifa Tranquilisima,Precio de la energía y término fijo,0.1299,0.1299,0.1299,0.068219,0.068219,0.0
+Repsol,Tarifa Ahorro Plus,Precio de la energía y término fijo,0.119746,0.119746,0.119746,0.068219,0.068219,0.0
+Repsol,Tarifa 10h descuento,Precio de la energía y término fijo,0.17283,0.17283,0.086415,0.068219,0.068219,0.0
+Xenera,Home contigo,0,0.161067,0.112608,0.083165,0.070357,0.070357,3.0
+Xenera,En casa,0,0.168687,0.124649,0.120417,0.070357,0.070357,3.0
+Xenera,A vaquiña fija,0,0.125052,0.125052,0.125052,0.070357,0.070357,3.0
+Xenera,Home contigo única,0,0.117662,0.117662,0.117662,0.070357,0.070357,3.0

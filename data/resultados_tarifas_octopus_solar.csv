@@ -1,0 +1,2 @@
+Título,Descripción,Energía Punta,Energía Llano,Energía Valle,Potencia Punta,Potencia Valle,Compensación Excedentes
+Octopus Solar,Precio fijo para cada periodo,"0,171 €/kWh","0,123 €/kWh","0,075 €/kWh","0,089 €/kW/día","0,026 €/kW/día","+0,05 €/kWh"

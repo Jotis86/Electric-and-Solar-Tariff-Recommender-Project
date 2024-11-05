@@ -1,0 +1,6 @@
+streamlit
+pandas
+beautifulsoup4
+selenium
+matplotlib
+requests
