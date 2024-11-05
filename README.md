@@ -2,7 +2,7 @@
 
 ![An electric bulb and several piles of coins](streamlit_app/image.jpg "You can save money choosing the best tariff")
 
-➡️ Try it here : [Electric and Solar Tariff Recommender](https://electric-tariff-recommender.streamlit.app/) ⬅️
+➡️ Try it here : [Electric and Solar Tariff Recommender](https://electric-and-solar-tariff-recommender-project-aklabfg6vkkxekht.streamlit.app/) ⬅️
 
 ## 📋 Objective
 The goal of this project is to provide personalized recommendations for solar panel installations in homes, helping users to save on their electricity bills and contribute to a more sustainable world. 🌍✨
@@ -87,7 +87,7 @@ The Streamlit app has the following structure:
 
 
 ## 🎥 Project Presentation
-A pdf presentation of the project is available [here](https://github.com/datasilvia/data-wrangling-project/blob/main/recomendador_tarifas.pdf).
+A pdf presentation of the project is available [here](https://github.com/Jotis86/Electric-and-Solar-Tariff-Recommender-Project/blob/main/presentation/recomendador_tarifas.pdf).
 The online version of the presentation is also available [here](https://www.canva.com/design/DAGVK1T4r0Q/1RBA97MLAYG6vvedLw5uRA/edit).
 
 ##  📊 Data Sources
@@ -110,6 +110,8 @@ The online version of the presentation is also available [here](https://www.canv
 
 ## 🤝 Collaborations and Suggestions
 We welcome collaborations and suggestions! Feel free to open an issue or submit a pull request. 
+
+
 
 ![A Vaquiña](/images/cow.png "This friendly cow is from Xenera, one of the companies we studied, from Galicia, the land of Juan, our master data scrapper and app deployer.")
 ![Octocat](/images/octocat.jpg "Octocat likes to save money and help the environment with the best electricity rate and solar panels")
