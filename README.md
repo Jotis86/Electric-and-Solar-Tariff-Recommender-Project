@@ -83,7 +83,11 @@ The Streamlit app has the following structure:
 - **Electric Tariff Recommender**: Tool to recommend the best electric tariffs.
 - **Solar Panel Tariff Recommender**: Tool to recommend the best solar panel tariffs.
 
-![Aplication menu](/images/menu.jpg "Side menu of the app") ![Graphic](/images/visualizacion.jpg "Visualization of the data") ![Tariffs](/images/tarifas.jpg "Users write their data to obtain a recomendation")
+<div style="display: flex; justify-content: space-around;">
+    <img src="/images/menu.jpg" alt="Side menu of the app" title="Side menu of the app" style="width: 30%;">
+    <img src="/images/visualizacion.jpg" alt="Visualization of the data" title="Visualization of the data" style="width: 30%;">
+    <img src="/images/tarifas.jpg" alt="Users write their data to obtain a recomendation" title="Users write their data to obtain a recomendation" style="width: 30%;">
+</div>
 
 
 ## 🎥 Project Presentation
