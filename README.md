@@ -56,6 +56,9 @@ The summary report includes:
 
 ## 🗂️ Trello Board
 We used Trello for project management, allowing us to track our progress and collaborate effectively. Our Trello board included tasks for data collection, data wrangling, model development, and user interface design.
+
+<br>
+
 ![Trello](/images/Trello.png "Trello Board for project management")
 
 
@@ -91,8 +94,8 @@ The Streamlit app has the following structure:
 
 
 ## 🎥 Project Presentation
-A pdf presentation of the project is available [here](https://github.com/Jotis86/Electric-and-Solar-Tariff-Recommender-Project/blob/main/presentation/recomendador_tarifas.pdf).
-The online version of the presentation is also available [here](https://www.canva.com/design/DAGVK1T4r0Q/1RBA97MLAYG6vvedLw5uRA/edit).
+A pdf presentation of the project is available [here](https://github.com/Jotis86/Electric-and-Solar-Tariff-Recommender-Project/blob/main/presentation/presentation.pdf).
+The online version of the presentation is also available [here](https://www.canva.com/design/DAGVsKQ_pzc/uV1tEcbW3xyIJRd3o6ZjdA/edit).
 
 ##  📊 Data Sources
 
