@@ -110,8 +110,3 @@ The online version of the presentation is also available [here](https://www.canv
 
 ## 🤝 Collaborations and Suggestions
 We welcome collaborations and suggestions! Feel free to open an issue or submit a pull request. 
-
-
-
-![A Vaquiña](/images/cow.png "This friendly cow is from Xenera, one of the companies we studied, from Galicia, the land of Juan, our master data scrapper and app deployer.")
-![Octocat](/images/octocat.jpg "Octocat likes to save money and help the environment with the best electricity rate and solar panels")
