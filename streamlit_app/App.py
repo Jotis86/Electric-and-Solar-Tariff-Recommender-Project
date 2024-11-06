@@ -76,18 +76,6 @@ elif seccion == "Objetivos":
        - Crear gráficos y visualizaciones que faciliten la comprensión de los datos y las recomendaciones. 📊
        - Mostrar comparativas de tarifas y eficiencia de placas solares para ayudar a los usuarios a tomar decisiones informadas. 📈
        - Proporcionar herramientas interactivas que permitan a los usuarios explorar diferentes escenarios y opciones. 🛠️
-
-    **Beneficios del Ahorro Energético y la Energía Sostenible**:
-
-    🌟 **Ahorro Económico**: Al elegir la tarifa de luz más adecuada y optimizar el uso de energía solar, los usuarios pueden reducir significativamente sus facturas de electricidad. Esto no solo representa un ahorro económico, sino que también libera recursos financieros para otras necesidades. 💰
-
-    🌟 **Sostenibilidad Ambiental**: La adopción de prácticas de ahorro energético y el uso de energía solar contribuyen a la reducción de la huella de carbono. Al disminuir el consumo de energía proveniente de fuentes no renovables, ayudamos a proteger el medio ambiente y a combatir el cambio climático. 🌍🌱
-
-    🌟 **Independencia Energética**: La instalación de placas solares permite a los usuarios generar su propia energía, reduciendo la dependencia de las compañías eléctricas y aumentando la resiliencia ante posibles fluctuaciones en los precios de la energía. ☀️🔋
-
-    🌟 **Innovación y Tecnología**: Este proyecto fomenta el uso de tecnologías avanzadas como el web scraping, el análisis de datos y la visualización interactiva para proporcionar recomendaciones precisas y útiles. Esto no solo mejora la experiencia del usuario, sino que también impulsa la innovación en el sector energético. 🚀💡
-
-    Al alcanzar estos objetivos, esperamos contribuir al ahorro energético y a la adopción de prácticas sostenibles en el consumo de electricidad. 🌱🔋
     """)
 
 # Sección de Metodología
