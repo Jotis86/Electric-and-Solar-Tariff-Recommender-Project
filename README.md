@@ -2,6 +2,12 @@
 
 ![An electric bulb and several piles of coins](streamlit_app/image.jpg "You can save money choosing the best tariff")
 
+![Commits](https://img.shields.io/github/commit-activity/m/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
+![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
+![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
+![Forks](https://img.shields.io/github/forks/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
+![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
+
 ➡️ Try it here : [Electric and Solar Tariff Recommender](https://electric-and-solar-tariff-recommender-project-aklabfg6vkkxekht.streamlit.app/) ⬅️
 
 ## 📋 Objective
