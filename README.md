@@ -7,6 +7,9 @@
 ![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
 ![Forks](https://img.shields.io/github/forks/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
 ![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
+![Autor](https://img.shields.io/badge/autor-Juan%20Duran%20Bon-blue)
+![Licencia](https://img.shields.io/github/license/Jotis86/Electric-and-Solar-Tariff-Recommender-Project)
+
 
 ➡️ Try it here : [Electric and Solar Tariff Recommender](https://electric-and-solar-tariff-recommender-project-aklabfg6vkkxekht.streamlit.app/) ⬅️
 
@@ -125,5 +128,8 @@ The online version of the presentation is also available [here](https://www.canv
 We welcome collaborations and suggestions! Feel free to open an issue or submit a pull request. 🚀
 
 Thank you for taking the time to explore our project. We hope you find it useful and informative. Your feedback and contributions are invaluable to us, and we look forward to working together to improve and expand this project. 🙌
+
+## 📝 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 Happy coding! 💻✨
