@@ -11,10 +11,10 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 st.title("Recomendador de Tarifas de Luz y Placas Solares")
 
 # Añadir una imagen en la página principal
-st.image(os.path.join(current_dir, "image.jpg"), use_column_width=True)
+st.image(os.path.join(current_dir, "image.jpg"), use_container_width=True)
 
 # Añadir una imagen en la parte superior del menú de navegación
-st.sidebar.image(os.path.join(current_dir, "octocat.jpg"), use_column_width=True)
+st.sidebar.image(os.path.join(current_dir, "octocat.jpg"), use_container_width=True)
 
 # Menú de navegación
 st.sidebar.header("Menú de Navegación")
@@ -133,43 +133,43 @@ elif seccion == "Visualizaciones":
 
     # Mostrar el gráfico seleccionado y su explicación
     if grafico_seleccionado == "Punta por Empresa":
-        st.image(os.path.join(current_dir, "punta_por_empresa.png"), caption="Punta por Empresa", use_column_width=True)
+        st.image(os.path.join(current_dir, "punta_por_empresa.png"), caption="Punta por Empresa", use_container_width=True)
         st.write("Este gráfico muestra la tarifa de punta (P1) por empresa. La tarifa de punta se aplica durante las horas de mayor demanda de energía, generalmente durante el día. Este gráfico permite comparar las tarifas de punta ofrecidas por diferentes empresas.")
 
     elif grafico_seleccionado == "Punta por Tarifa":
-        st.image(os.path.join(current_dir, "punta_por_tarifa.png"), caption="Punta por Tarifa", use_column_width=True)
+        st.image(os.path.join(current_dir, "punta_por_tarifa.png"), caption="Punta por Tarifa", use_container_width=True)
         st.write("Este gráfico muestra la tarifa de punta (P1) por tarifa. La tarifa de punta se aplica durante las horas de mayor demanda de energía. Este gráfico permite comparar las diferentes tarifas de punta disponibles en el mercado.")
 
     elif grafico_seleccionado == "Llano por Empresa":
-        st.image(os.path.join(current_dir, "llano_por_empresa.png"), caption="Llano por Empresa", use_column_width=True)
+        st.image(os.path.join(current_dir, "llano_por_empresa.png"), caption="Llano por Empresa", use_container_width=True)
         st.write("Este gráfico muestra la tarifa de llano (P2) por empresa. La tarifa de llano se aplica durante las horas de demanda moderada de energía. Este gráfico permite comparar las tarifas de llano ofrecidas por diferentes empresas.")
 
     elif grafico_seleccionado == "Llano por Tarifa":
-        st.image(os.path.join(current_dir, "llano_por_tarifa.png"), caption="Llano por Tarifa", use_column_width=True)
+        st.image(os.path.join(current_dir, "llano_por_tarifa.png"), caption="Llano por Tarifa", use_container_width=True)
         st.write("Este gráfico muestra la tarifa de llano (P2) por tarifa. La tarifa de llano se aplica durante las horas de demanda moderada de energía. Este gráfico permite comparar las diferentes tarifas de llano disponibles en el mercado.")
 
     elif grafico_seleccionado == "Valle por Empresa":
-        st.image(os.path.join(current_dir, "valle_por_empresa.png"), caption="Valle por Empresa", use_column_width=True)
+        st.image(os.path.join(current_dir, "valle_por_empresa.png"), caption="Valle por Empresa", use_container_width=True)
         st.write("Este gráfico muestra la tarifa de valle (P3) por empresa. La tarifa de valle se aplica durante las horas de menor demanda de energía, generalmente durante la noche. Este gráfico permite comparar las tarifas de valle ofrecidas por diferentes empresas.")
 
     elif grafico_seleccionado == "Valle por Tarifa":
-        st.image(os.path.join(current_dir, "valle_por_tarifa.png"), caption="Valle por Tarifa", use_column_width=True)
+        st.image(os.path.join(current_dir, "valle_por_tarifa.png"), caption="Valle por Tarifa", use_container_width=True)
         st.write("Este gráfico muestra la tarifa de valle (P3) por tarifa. La tarifa de valle se aplica durante las horas de menor demanda de energía. Este gráfico permite comparar las diferentes tarifas de valle disponibles en el mercado.")
 
     elif grafico_seleccionado == "Dashboard Tarifas":
-        st.image(os.path.join(current_dir, "dashboard_tarifas.png"), caption="Dashboard Tarifas", use_column_width=True)
+        st.image(os.path.join(current_dir, "dashboard_tarifas.png"), caption="Dashboard Tarifas", use_container_width=True)
         st.write("Este dashboard muestra una visión general de las tarifas de luz, incluyendo las tarifas de punta, llano y valle por diferentes empresas y tarifas. Permite una comparación rápida y visual de las diferentes opciones disponibles en el mercado.")
 
     elif grafico_seleccionado == "Potencia por Empresas":
-        st.image(os.path.join(current_dir, "potencia_por_empresas.png"), caption="Potencia por Empresas", use_column_width=True)
+        st.image(os.path.join(current_dir, "potencia_por_empresas.png"), caption="Potencia por Empresas", use_container_width=True)
         st.write("Este gráfico muestra la potencia contratada por diferentes empresas. La potencia contratada es la cantidad de energía que una empresa puede suministrar a sus clientes. Este gráfico permite comparar la capacidad de suministro de energía de diferentes empresas.")
 
     elif grafico_seleccionado == "Top Sol Ciudades":
-        st.image(os.path.join(current_dir, "top_sol_ciudades.png"), caption="Top Sol Ciudades", use_column_width=True)
+        st.image(os.path.join(current_dir, "top_sol_ciudades.png"), caption="Top Sol Ciudades", use_container_width=True)
         st.write("Este gráfico muestra las ciudades con más horas de sol al año. Las horas de sol son un factor importante a considerar al instalar placas solares, ya que determinan la cantidad de energía que se puede generar. Este gráfico permite identificar las mejores ciudades para la instalación de placas solares.")
 
     elif grafico_seleccionado == "Bottom Sol Ciudades":
-        st.image(os.path.join(current_dir, "bottom_sol_ciudades.png"), caption="Bottom Sol Ciudades", use_column_width=True)
+        st.image(os.path.join(current_dir, "bottom_sol_ciudades.png"), caption="Bottom Sol Ciudades", use_container_width=True)
         st.write("Este gráfico muestra las ciudades con menos horas de sol al año. Las horas de sol son un factor importante a considerar al instalar placas solares. Este gráfico permite identificar las ciudades menos favorables para la instalación de placas solares.")
 
 # Sección de Recomendador
