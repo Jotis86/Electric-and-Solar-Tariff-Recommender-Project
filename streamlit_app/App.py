@@ -542,15 +542,129 @@ elif seccion_seleccionada == "Visualizaciones":
 
 # Sección de Recomendador
 elif seccion_seleccionada == "Recomendador Tarifas Eléctricas":
-    st.header("Recomendador Tarifas Eléctricas")
+    # CSS adicional para esta sección
+    st.markdown("""
+    <style>
+        /* Header con gradiente */
+        .recomendador-header {
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 51%, #2989d8 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Tarjetas para las diferentes secciones */
+        .form-section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Iconos de sección */
+        .section-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #2989d8;
+        }
+        
+        /* Títulos de sección */
+        .section-title {
+            color: #1e5799;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        
+        /* Notas informativas */
+        .info-note {
+            background: #f0f7ff;
+            border-left: 4px solid #2989d8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        /* Pasos del proceso */
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .step-number {
+            background: #2989d8;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
-    st.write("""
-    🌞 **¡Bienvenido al Recomendador de Tarifas de Luz y Placas Solares!** 🌞
-
-    Por favor, complete el siguiente formulario para recibir recomendaciones personalizadas que le ayudarán a ahorrar en su factura de electricidad y a aprovechar la energía solar de manera eficiente. 💡🔋
-
-    **¡Hagamos un mundo más sostenible juntos!** 🌍✨
-    """)
+    # Header principal con iconos
+    st.markdown("""
+    <div class="recomendador-header">
+        <h1>💡 Recomendador de Tarifas Eléctricas ⚡</h1>
+        <p>Encuentra la tarifa que mejor se adapta a tus necesidades y ahorra en tu factura de luz</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Introducción en columnas para mejor presentación
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        st.markdown("""
+        <div class="form-section">
+            <div class="section-title">¿Cómo funciona?</div>
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div>Proporciónanos información sobre tu consumo eléctrico</div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div>Nuestro algoritmo analiza las mejores tarifas disponibles</div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div>Recibe recomendaciones personalizadas de tarifas</div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div>Compara y elige la opción que más te convenga</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with col2:
+        st.markdown("""
+        <div class="form-section" style="text-align: center;">
+            <div class="section-icon">💰</div>
+            <p style="font-size: 1.2rem; font-weight: 500; color: #1e5799;">Ahorra hasta un 30%</p>
+            <p>en tu factura de luz eligiendo la tarifa correcta</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Nota informativa sobre datos necesarios
+    st.markdown("""
+    <div class="info-note">
+        <p><strong>📝 Para obtener los mejores resultados</strong></p>
+        <p>Necesitaremos algunos datos sobre tu consumo eléctrico. Si no conoces algún dato, te ayudaremos a estimarlo.</p>
+    </div>
+    """, unsafe_allow_html=True)
 
     # Función para cargar tarifas desde un archivo CSV
 
