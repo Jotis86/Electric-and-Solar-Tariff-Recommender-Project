@@ -94,6 +94,14 @@ st.markdown("""
 # Obtener la ruta absoluta del directorio actual
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
+# Banner personalizado en lugar de imagen 
+st.markdown("""
+<div class="banner">
+    <h1>⚡ Recomendador de Tarifas de Luz y Placas Solares ☀️</h1>
+    <p>Ahorra energía y dinero con recomendaciones personalizadas basadas en tus necesidades</p>
+</div>
+""", unsafe_allow_html=True)
+
 # Contenido del sidebar mejorado
 with st.sidebar:
     # Logo en la parte superior del sidebar
