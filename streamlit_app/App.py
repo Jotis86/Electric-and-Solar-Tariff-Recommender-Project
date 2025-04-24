@@ -630,7 +630,7 @@ elif seccion_seleccionada == "Recomendador Tarifas Eléctricas":
 
     # Header principal con iconos - Estilo como en la sección anterior
     st.markdown("""
-    <div class="graph-explanation" style="background: #e8f4fc; border-left: 4px solid #2989d8; padding: 15px 20px 15px 25px;">
+    <div class="graph-explanation" style="background: #e8f4fc; border-left: 4px solid #2989d8; padding: 15px 20px 15px 25px; margin-bottom: 30px;">
         <h3 style="color: #1e5799; margin-left: 10px;">💡 Recomendador de Tarifas Eléctricas ⚡</h3>
         <p style="color: #333; margin-left: 10px;">Encuentra la tarifa que mejor se adapta a tus necesidades y ahorra en tu factura de luz</p>
     </div>
