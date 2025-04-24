@@ -479,7 +479,7 @@ elif seccion_seleccionada == "Visualizaciones":
     )
     
     # Contenedor para el gráfico con estilo mejorado
-    st.markdown('<div class="graph-container" style="background-color: white; color: #333;">', unsafe_allow_html=True)
+    #st.markdown('<div class="graph-container" style="background-color: white; color: #333;">', unsafe_allow_html=True)
     
     # Categoría del gráfico como etiqueta
     st.markdown(f'<span class="graph-category">{st.session_state.categoria_seleccionada}</span>', unsafe_allow_html=True)
