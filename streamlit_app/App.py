@@ -965,7 +965,7 @@ elif seccion_seleccionada == "Recomendador Placas Solares":
         <div class="form-section" style="text-align: center;">
             <div class="section-icon">☀️</div>
             <p style="font-size: 1.2rem; font-weight: 500; color: #1e5799;">Reduce hasta un 70%</p>
-            <p style="color: #333;">lo que pagas por luz aprovechando la energía del sol</p>
+            <p style="color: #333;">tu factura de luz con energia solar</p>
         </div>
         """, unsafe_allow_html=True)
     
