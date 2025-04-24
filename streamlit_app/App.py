@@ -285,7 +285,7 @@ if seccion_seleccionada == "Inicio":
         <div class="card">
             <div class="card-title">🔌 Para Tarifas Eléctricas</div>
             <ul>
-                <li>Proporciona tu consumo mensual promedio</li>
+                <li>Proporciona tu consumo mensual, o la app te calcula el promedio</li>
                 <li>Indica tu potencia contratada actual</li>
                 <li>Recibe recomendaciones de tarifas que mejor se ajusten a tu perfil</li>
             </ul>
