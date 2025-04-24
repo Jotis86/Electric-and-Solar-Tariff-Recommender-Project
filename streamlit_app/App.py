@@ -314,67 +314,211 @@ if seccion_seleccionada == "Inicio":
 
 # Sección de Visualizaciones
 elif seccion_seleccionada == "Visualizaciones":
-    st.header("📊 Visualizaciones 📊")
-    st.write("""
-    Bienvenido a la sección de visualizaciones. Aquí podrás explorar diferentes gráficos que te ayudarán a entender mejor los datos relacionados con las tarifas de luz y la energía solar. 📈📉
+    # CSS adicional para la sección de visualizaciones
+    st.markdown("""
+    <style>
+        /* Estilos para el selector de gráficos */
+        .stSelectbox > div:first-child {
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 51%, #2989d8 100%);
+            color: white !important;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        /* Estilos para el contenedor de gráficos */
+        .graph-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            border: 1px solid #eaeaea;
+        }
+        
+        /* Estilos para la explicación del gráfico */
+        .graph-explanation {
+            background: #f8f9fa;
+            border-left: 4px solid #2989d8;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 15px 0;
+            color: #333;
+        }
+        
+        /* Estilos para la categoría del gráfico */
+        .graph-category {
+            display: inline-block;
+            background: #2989d8;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 30px;
+            font-size: 0.8em;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        /* Estilo para el título */
+        .vis-header {
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 51%, #2989d8 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        /* Estilo para las cards de categoría */
+        .category-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .category-card {
+            flex: 1;
+            min-width: 120px;
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eaeaea;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .category-card.active {
+            border: 2px solid #2989d8;
+            background: #f0f7ff;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
-    Selecciona el gráfico que deseas ver a continuación y obtén una visión detallada de la información. ¡Esperamos que estas visualizaciones te sean útiles para tomar decisiones informadas! 💡🔍
-    """)
-
-    # Menú de selección de gráficos
-    grafico_seleccionado = st.selectbox("Seleccione un gráfico", [
-        "Punta por Empresa", 
-        "Punta por Tarifa", 
-        "Llano por Empresa", 
-        "Llano por Tarifa", 
-        "Valle por Empresa", 
-        "Valle por Tarifa", 
-        "Dashboard Tarifas", 
-        "Potencia por Empresas", 
-        "Top Sol Ciudades", 
-        "Bottom Sol Ciudades"
-    ])
-
-    # Mostrar el gráfico seleccionado y su explicación
-    if grafico_seleccionado == "Punta por Empresa":
-        st.image(os.path.join(current_dir, "punta_por_empresa.png"), caption="Punta por Empresa", use_container_width=True)
-        st.write("Este gráfico muestra la tarifa de punta (P1) por empresa. La tarifa de punta se aplica durante las horas de mayor demanda de energía, generalmente durante el día. Este gráfico permite comparar las tarifas de punta ofrecidas por diferentes empresas.")
-
-    elif grafico_seleccionado == "Punta por Tarifa":
-        st.image(os.path.join(current_dir, "punta_por_tarifa.png"), caption="Punta por Tarifa", use_container_width=True)
-        st.write("Este gráfico muestra la tarifa de punta (P1) por tarifa. La tarifa de punta se aplica durante las horas de mayor demanda de energía. Este gráfico permite comparar las diferentes tarifas de punta disponibles en el mercado.")
-
-    elif grafico_seleccionado == "Llano por Empresa":
-        st.image(os.path.join(current_dir, "llano_por_empresa.png"), caption="Llano por Empresa", use_container_width=True)
-        st.write("Este gráfico muestra la tarifa de llano (P2) por empresa. La tarifa de llano se aplica durante las horas de demanda moderada de energía. Este gráfico permite comparar las tarifas de llano ofrecidas por diferentes empresas.")
-
-    elif grafico_seleccionado == "Llano por Tarifa":
-        st.image(os.path.join(current_dir, "llano_por_tarifa.png"), caption="Llano por Tarifa", use_container_width=True)
-        st.write("Este gráfico muestra la tarifa de llano (P2) por tarifa. La tarifa de llano se aplica durante las horas de demanda moderada de energía. Este gráfico permite comparar las diferentes tarifas de llano disponibles en el mercado.")
-
-    elif grafico_seleccionado == "Valle por Empresa":
-        st.image(os.path.join(current_dir, "valle_por_empresa.png"), caption="Valle por Empresa", use_container_width=True)
-        st.write("Este gráfico muestra la tarifa de valle (P3) por empresa. La tarifa de valle se aplica durante las horas de menor demanda de energía, generalmente durante la noche. Este gráfico permite comparar las tarifas de valle ofrecidas por diferentes empresas.")
-
-    elif grafico_seleccionado == "Valle por Tarifa":
-        st.image(os.path.join(current_dir, "valle_por_tarifa.png"), caption="Valle por Tarifa", use_container_width=True)
-        st.write("Este gráfico muestra la tarifa de valle (P3) por tarifa. La tarifa de valle se aplica durante las horas de menor demanda de energía. Este gráfico permite comparar las diferentes tarifas de valle disponibles en el mercado.")
-
-    elif grafico_seleccionado == "Dashboard Tarifas":
-        st.image(os.path.join(current_dir, "dashboard_tarifas.png"), caption="Dashboard Tarifas", use_container_width=True)
-        st.write("Este dashboard muestra una visión general de las tarifas de luz, incluyendo las tarifas de punta, llano y valle por diferentes empresas y tarifas. Permite una comparación rápida y visual de las diferentes opciones disponibles en el mercado.")
-
-    elif grafico_seleccionado == "Potencia por Empresas":
-        st.image(os.path.join(current_dir, "potencia_por_empresas.png"), caption="Potencia por Empresas", use_container_width=True)
-        st.write("Este gráfico muestra la potencia contratada por diferentes empresas. La potencia contratada es la cantidad de energía que una empresa puede suministrar a sus clientes. Este gráfico permite comparar la capacidad de suministro de energía de diferentes empresas.")
-
-    elif grafico_seleccionado == "Top Sol Ciudades":
-        st.image(os.path.join(current_dir, "top_sol_ciudades.png"), caption="Top Sol Ciudades", use_container_width=True)
-        st.write("Este gráfico muestra las ciudades con más horas de sol al año. Las horas de sol son un factor importante a considerar al instalar placas solares, ya que determinan la cantidad de energía que se puede generar. Este gráfico permite identificar las mejores ciudades para la instalación de placas solares.")
-
-    elif grafico_seleccionado == "Bottom Sol Ciudades":
-        st.image(os.path.join(current_dir, "bottom_sol_ciudades.png"), caption="Bottom Sol Ciudades", use_container_width=True)
-        st.write("Este gráfico muestra las ciudades con menos horas de sol al año. Las horas de sol son un factor importante a considerar al instalar placas solares. Este gráfico permite identificar las ciudades menos favorables para la instalación de placas solares.")
+    # Título con estilo
+    st.markdown('<div class="vis-header"><h2>📊 Visualizaciones Interactivas 📊</h2></div>', unsafe_allow_html=True)
+    
+    # Introducción
+    st.markdown("""
+    <div class="graph-explanation" style="background: #e8f4fc; border-left: 4px solid #2989d8;">
+        <h3 style="color: #1e5799;">Explora Nuestros Datos</h3>
+        <p>Descubre insights valiosos a través de nuestras visualizaciones interactivas. Estos gráficos te ayudarán a 
+        entender mejor las tarifas eléctricas y la energía solar en diferentes contextos.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Categorizar los gráficos
+    categorias = {
+        "Tarifas Eléctricas": ["Punta por Empresa", "Punta por Tarifa", "Llano por Empresa", "Llano por Tarifa", 
+                             "Valle por Empresa", "Valle por Tarifa", "Dashboard Tarifas", "Potencia por Empresas"],
+        "Energía Solar": ["Top Sol Ciudades", "Bottom Sol Ciudades"]
+    }
+    
+    # Selección de categoría con tarjetas
+    st.markdown('<h3>Selecciona una Categoría</h3>', unsafe_allow_html=True)
+    st.markdown('<div class="category-cards">', unsafe_allow_html=True)
+    
+    # Usar sesión para recordar la categoría seleccionada
+    if 'categoria_seleccionada' not in st.session_state:
+        st.session_state.categoria_seleccionada = list(categorias.keys())[0]
+    
+    for cat in categorias.keys():
+        active_class = "active" if st.session_state.categoria_seleccionada == cat else ""
+        if st.markdown(f'<div class="category-card {active_class}">{cat}</div>', unsafe_allow_html=True):
+            st.session_state.categoria_seleccionada = cat
+    
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Mostrar lista de gráficos según la categoría seleccionada
+    col1, col2 = st.columns([1, 2])
+    
+    with col1:
+        # Mostrar selector de gráficos para la categoría seleccionada
+        st.subheader("Selecciona un Gráfico")
+        grafico_seleccionado = st.selectbox(
+            "", 
+            categorias[st.session_state.categoria_seleccionada],
+            key="grafico_selector"
+        )
+        
+        # Información de lo que verás
+        st.markdown(f"""
+        <div class="graph-explanation">
+            <h4>¿Qué verás?</h4>
+            <p>El gráfico <b>{grafico_seleccionado}</b> te muestra información sobre 
+            {"tarifas eléctricas" if grafico_seleccionado in categorias["Tarifas Eléctricas"] else "energía solar"}.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Mostrar el gráfico seleccionado y su explicación en la columna principal
+    with col2:
+        # Contenedor para el gráfico
+        st.markdown('<div class="graph-container">', unsafe_allow_html=True)
+        
+        # Categoría del gráfico como etiqueta
+        categoria = "Tarifas Eléctricas" if grafico_seleccionado in categorias["Tarifas Eléctricas"] else "Energía Solar"
+        st.markdown(f'<span class="graph-category">{categoria}</span>', unsafe_allow_html=True)
+        
+        # Mostrar el gráfico
+        if grafico_seleccionado == "Punta por Empresa":
+            st.image(os.path.join(current_dir, "punta_por_empresa.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra la tarifa de punta (P1) por empresa. La tarifa de punta se aplica durante las horas de mayor demanda de energía, generalmente durante el día."
+        
+        elif grafico_seleccionado == "Punta por Tarifa":
+            st.image(os.path.join(current_dir, "punta_por_tarifa.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra la tarifa de punta (P1) por tarifa. Permite comparar las diferentes tarifas de punta disponibles en el mercado."
+        
+        elif grafico_seleccionado == "Llano por Empresa":
+            st.image(os.path.join(current_dir, "llano_por_empresa.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra la tarifa de llano (P2) por empresa. La tarifa de llano se aplica durante las horas de demanda moderada de energía."
+        
+        elif grafico_seleccionado == "Llano por Tarifa":
+            st.image(os.path.join(current_dir, "llano_por_tarifa.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra la tarifa de llano (P2) por tarifa. Permite comparar las diferentes tarifas de llano disponibles en el mercado."
+        
+        elif grafico_seleccionado == "Valle por Empresa":
+            st.image(os.path.join(current_dir, "valle_por_empresa.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra la tarifa de valle (P3) por empresa. La tarifa de valle se aplica durante las horas de menor demanda de energía, generalmente durante la noche."
+        
+        elif grafico_seleccionado == "Valle por Tarifa":
+            st.image(os.path.join(current_dir, "valle_por_tarifa.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra la tarifa de valle (P3) por tarifa. Permite comparar las diferentes tarifas de valle disponibles en el mercado."
+        
+        elif grafico_seleccionado == "Dashboard Tarifas":
+            st.image(os.path.join(current_dir, "dashboard_tarifas.png"), use_container_width=True)
+            explicacion = "Este dashboard muestra una visión general de las tarifas de luz, incluyendo las tarifas de punta, llano y valle por diferentes empresas y tarifas."
+        
+        elif grafico_seleccionado == "Potencia por Empresas":
+            st.image(os.path.join(current_dir, "potencia_por_empresas.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra la potencia contratada por diferentes empresas. La potencia contratada es la cantidad de energía que una empresa puede suministrar a sus clientes."
+        
+        elif grafico_seleccionado == "Top Sol Ciudades":
+            st.image(os.path.join(current_dir, "top_sol_ciudades.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra las ciudades con más horas de sol al año. Las horas de sol son un factor importante a considerar al instalar placas solares, ya que determinan la cantidad de energía que se puede generar."
+        
+        elif grafico_seleccionado == "Bottom Sol Ciudades":
+            st.image(os.path.join(current_dir, "bottom_sol_ciudades.png"), use_container_width=True)
+            explicacion = "Este gráfico muestra las ciudades con menos horas de sol al año. Esto te permite identificar las ciudades menos favorables para la instalación de placas solares."
+        
+        # Cerrar el contenedor del gráfico
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Explicación del gráfico
+        st.markdown(f"""
+        <div class="graph-explanation">
+            <h3>Explicación</h3>
+            <p>{explicacion}</p>
+            <p><b>¿Por qué es importante?</b> Esta información te ayuda a tomar decisiones más informadas sobre tu consumo energético y posibles instalaciones solares.</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 # Sección de Recomendador
 elif seccion_seleccionada == "Recomendador Tarifas Eléctricas":
