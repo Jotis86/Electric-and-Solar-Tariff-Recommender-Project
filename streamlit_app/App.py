@@ -943,7 +943,7 @@ elif seccion_seleccionada == "Recomendador Placas Solares":
             <div class="section-title">¿Cómo funciona?</div>
             <div class="process-step">
                 <div class="step-number">1</div>
-                <div>Proporciónanos información sobre tu ubicación y espacio disponible</div>
+                <div>Proporciónanos información sobre tu ubicación</div>
             </div>
             <div class="process-step">
                 <div class="step-number">2</div>
@@ -951,11 +951,11 @@ elif seccion_seleccionada == "Recomendador Placas Solares":
             </div>
             <div class="process-step">
                 <div class="step-number">3</div>
-                <div>Recibe recomendaciones sobre número y tipo de placas solares</div>
+                <div>Recibe recomendaciones sobre el número de placas solares</div>
             </div>
             <div class="process-step">
                 <div class="step-number">4</div>
-                <div>Conoce el ahorro estimado y tiempo de amortización</div>
+                <div>Conoce el ahorro estimado</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
