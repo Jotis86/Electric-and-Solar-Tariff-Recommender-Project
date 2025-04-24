@@ -115,12 +115,10 @@ with st.sidebar:
     
     # Opciones de navegación con iconos
     opciones = {
-        "🏠 Inicio": "Introducción",
-        "🎯 Objetivos": "Objetivos",
-        "📊 Metodología": "Metodología",
+        "🏠 Inicio": "Inicio",
         "📈 Visualizaciones": "Visualizaciones",
-        "💡 Tarifas Eléctricas": "Recomendador Tarifas Eléctricas",
-        "☀️ Placas Solares": "Recomendador Placas Solares"
+        "💡 Recomendador Tarifas": "Recomendador Tarifas Eléctricas",
+        "☀️ Recomendador Solar": "Recomendador Placas Solares"
     }
 
     seccion = st.radio("", list(opciones.keys()), key="nav")
@@ -141,92 +139,164 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
 # Sección de Introducción
-if seccion_seleccionada == "Introducción":
-    st.header("Introducción")
-    st.write("""
-    🌞 **Bienvenido al Recomendador de Tarifas de Luz y Placas Solares** 🌞
+if seccion_seleccionada == "Inicio":
+    # CSS personalizado para tarjetas y diseño
+    st.markdown("""
+    <style>
+        .card {
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2989d8;
+        }
+        .step-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .step-number {
+            background: #2989d8;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .highlight-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        h2 {
+            color: #1e5799;
+            border-bottom: 2px solid #2989d8;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
-    En este proyecto, hemos desarrollado una aplicación web innovadora que recomienda tarifas de luz y placas solares basadas en los datos ingresados por el usuario. La aplicación utiliza datos actualizados de tarifas de luz y eficiencia de placas solares para proporcionar recomendaciones personalizadas que pueden ayudar a los usuarios a ahorrar en sus facturas de electricidad y a aprovechar la energía solar de manera eficiente. 💡🔋
-
-    **¿Por qué es importante el ahorro energético?** 🌍
-
-    El ahorro energético no solo tiene beneficios económicos, sino que también contribuye significativamente a la sostenibilidad del medio ambiente. Al reducir el consumo de energía y utilizar fuentes de energía renovable como la solar, podemos disminuir nuestra huella de carbono y ayudar a combatir el cambio climático. 🌱🌞
-
-    **Beneficios del ahorro energético:**
-    - **Ahorro económico:** Reducir el consumo de energía puede resultar en ahorros significativos en las facturas de electricidad. Esto libera recursos financieros que pueden ser utilizados para otras necesidades. 💰
-    - **Sostenibilidad ambiental:** Utilizar energía renovable como la solar ayuda a reducir la dependencia de combustibles fósiles y disminuye las emisiones de gases de efecto invernadero. 🌍
-    - **Independencia energética:** La instalación de placas solares permite a los usuarios generar su propia energía, reduciendo la dependencia de las compañías eléctricas y aumentando la resiliencia ante posibles fluctuaciones en los precios de la energía. ☀️🔋
-    - **Innovación y tecnología:** Este proyecto fomenta el uso de tecnologías avanzadas como el web scraping, el análisis de datos y la visualización interactiva para proporcionar recomendaciones precisas y útiles. 🚀💡
-
-    **¿Cómo funciona nuestra aplicación?** 🛠️
-
-    Esta aplicación está diseñada para ser fácil de usar y accesible para todos. Simplemente ingrese sus datos en el formulario y obtenga recomendaciones personalizadas en cuestión de segundos. 🚀📊
-
-    **Pasos para utilizar la aplicación:**
-    1. **Ingrese sus datos:** Proporcione información sobre su consumo mensual de electricidad, la potencia contratada, las horas de sol disponibles y la superficie disponible para la instalación de placas solares.
-    2. **Obtenga recomendaciones:** La aplicación analizará los datos ingresados y proporcionará recomendaciones personalizadas de tarifas de luz y placas solares.
-    3. **Tome decisiones informadas:** Utilice las recomendaciones proporcionadas para elegir la tarifa de luz más adecuada y optimizar el uso de energía solar en su hogar.
-
-    **Compromiso con la sostenibilidad:**
-
-    Al utilizar esta aplicación, no solo está tomando decisiones informadas para ahorrar en sus facturas de electricidad, sino que también está contribuyendo a un futuro más sostenible. 🌱🔋
-
-    ¡Gracias por utilizar nuestra aplicación y por su compromiso con el ahorro energético y la sostenibilidad ambiental! 🌍💡
-    """)
-
-# Sección de Objetivos
-elif seccion_seleccionada == "Objetivos":
-    st.header("Objetivos")
-    st.write("""
-    🎯 **Objetivos del Proyecto** 🎯
-
-    Los objetivos principales de este proyecto son:
-
-    1. **Proporcionar recomendaciones personalizadas de tarifas de luz**:
-       - Analizar las tarifas de luz disponibles y recomendar la mejor opción basada en el consumo mensual y la potencia contratada del usuario. 💡
-       - Ayudar a los usuarios a reducir sus facturas de electricidad eligiendo la tarifa más económica. 💰
-       - Facilitar el acceso a información clara y precisa sobre las diferentes tarifas de luz disponibles en el mercado. 📊
-
-    2. **Proporcionar recomendaciones personalizadas de placas solares**:
-       - Evaluar la eficiencia de diferentes placas solares y recomendar la mejor opción basada en las horas de sol disponibles y la superficie disponible para la instalación. ☀️
-       - Promover el uso de energía solar como una fuente de energía renovable y sostenible. 🌱
-       - Ayudar a los usuarios a entender los beneficios económicos y ambientales de la instalación de placas solares. 🌍
-
-    3. **Visualizar datos relevantes sobre tarifas de luz y energía solar**:
-       - Crear gráficos y visualizaciones que faciliten la comprensión de los datos y las recomendaciones. 📊
-       - Mostrar comparativas de tarifas y eficiencia de placas solares para ayudar a los usuarios a tomar decisiones informadas. 📈
-       - Proporcionar herramientas interactivas que permitan a los usuarios explorar diferentes escenarios y opciones. 🛠️
-    """)
-
-# Sección de Metodología
-elif seccion_seleccionada == "Metodología":
-    st.header("🛠️ Metodología del Proyecto 🛠️")
-    st.write("""
-    En este proyecto, hemos seguido una metodología estructurada para garantizar la precisión y la utilidad de nuestras recomendaciones. A continuación, se detallan los pasos clave que hemos seguido:
-
-    1. **Recopilación de Datos** 🌐:
-       - Recopilamos datos de tarifas de luz de diferentes proveedores y datos de eficiencia de placas solares. 📊
-       - Utilizamos técnicas de web scraping para obtener datos actualizados de las páginas web de los proveedores de energía. 🕸️🔍
-       - Los datos incluyen información sobre precios de energía, precios de potencia, eficiencia de placas solares, y más. 💡
-
-    2. **Análisis de Datos** 📈:
-       - Analizamos los datos recopilados para identificar las mejores opciones de tarifas de luz y placas solares. 🔍
-       - Utilizamos técnicas de análisis de datos para calcular los costos estimados y la energía generada por las placas solares. 💡
-
-    3. **Desarrollo de la Aplicación Web** 💻:
-       - Desarrollamos una aplicación web utilizando Streamlit para proporcionar una interfaz fácil de usar. 🚀
-       - La aplicación permite a los usuarios ingresar sus datos y obtener recomendaciones personalizadas en tiempo real. ⏱️
-
-    4. **Visualización de Datos** 👁️:
-       - Creamos gráficos y visualizaciones utilizando Seaborn y Matplotlib para mostrar comparativas de tarifas y eficiencia de placas solares. 📊
-       - Las visualizaciones ayudan a los usuarios a comprender mejor los datos y las recomendaciones proporcionadas. 📈
-
-    5. **Validación y Pruebas** ✅:
-       - Probamos la aplicación con diferentes conjuntos de datos para asegurarnos de que las recomendaciones sean precisas y útiles. 🔧
-       - Realizamos ajustes y mejoras basadas en los comentarios de los usuarios y los resultados de las pruebas. 🛠️
-
-    Al seguir esta metodología, hemos creado una herramienta poderosa que puede ayudar a los usuarios a tomar decisiones informadas sobre sus tarifas de luz y el uso de energía solar. 🌞🔋
-    """)
+    # Encabezado principal
+    st.markdown("<h2>⚡ Recomendador de Tarifas de Luz y Placas Solares</h2>", unsafe_allow_html=True)
+    
+    # Descripción breve
+    st.markdown("""
+    <div class="highlight-section">
+        <p>Hemos desarrollado esta herramienta para ayudarte a <b>ahorrar dinero</b> y contribuir a un <b>futuro sostenible</b> 
+        mediante recomendaciones personalizadas de tarifas eléctricas y placas solares basadas en tus necesidades específicas.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Beneficios en 3 columnas
+    st.markdown("<h3>🌟 Beneficios</h3>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("""
+        <div class="card">
+            <div class="card-icon">💰</div>
+            <div class="card-title">Ahorro Económico</div>
+            <p>Reduce tus facturas de luz eligiendo la tarifa más económica según tu perfil de consumo.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with col2:
+        st.markdown("""
+        <div class="card">
+            <div class="card-icon">🌍</div>
+            <div class="card-title">Sostenibilidad</div>
+            <p>Disminuye tu huella de carbono utilizando energía solar y optimizando tu consumo energético.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with col3:
+        st.markdown("""
+        <div class="card">
+            <div class="card-icon">☀️</div>
+            <div class="card-title">Independencia Energética</div>
+            <p>Genera tu propia energía y reduce la dependencia de compañías eléctricas con placas solares.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Cómo funciona - Metodología simplificada
+    st.markdown("<h3>🔍 Cómo Funciona</h3>", unsafe_allow_html=True)
+    
+    # Metodología en pasos
+    st.markdown("""
+    <div class="step-box">
+        <div class="step-number">1</div>
+        <div>Recopilamos datos actualizados de tarifas eléctricas y eficiencia de placas solares.</div>
+    </div>
+    <div class="step-box">
+        <div class="step-number">2</div>
+        <div>Analizamos los datos para encontrar las opciones más eficientes y económicas.</div>
+    </div>
+    <div class="step-box">
+        <div class="step-number">3</div>
+        <div>Personalizamos las recomendaciones según tu consumo, ubicación y necesidades.</div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Cómo usar la aplicación
+    st.markdown("<h3>🚀 Cómo Usar la Aplicación</h3>", unsafe_allow_html=True)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        <div class="card">
+            <div class="card-title">🔌 Para Tarifas Eléctricas</div>
+            <ul>
+                <li>Proporciona tu consumo mensual promedio</li>
+                <li>Indica tu potencia contratada actual</li>
+                <li>Recibe recomendaciones de tarifas que mejor se ajusten a tu perfil</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with col2:
+        st.markdown("""
+        <div class="card">
+            <div class="card-title">☀️ Para Placas Solares</div>
+            <ul>
+                <li>Indica el espacio disponible para instalación</li>
+                <li>Proporciona tu ubicación para calcular las horas de sol</li>
+                <li>Descubre qué placas solares maximizarán tu ahorro</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Llamada a la acción
+    st.markdown("""
+    <div class="highlight-section" style="text-align: center; margin-top: 30px;">
+        <h3 style="color: #1e5799;">¡Comienza a ahorrar ahora!</h3>
+        <p>Navega a las secciones de recomendadores usando el menú lateral para obtener tus recomendaciones personalizadas.</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Sección de Visualizaciones
 elif seccion_seleccionada == "Visualizaciones":
