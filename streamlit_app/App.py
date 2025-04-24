@@ -105,7 +105,7 @@ st.markdown("""
 # Contenido del sidebar mejorado
 with st.sidebar:
     # Logo en la parte superior del sidebar
-    st.image(os.path.join(current_dir, "octocat.jpg"), use_container_width=True)
+    st.image(os.path.join(current_dir, "funko_sol.png"), use_container_width=True)
     
     # Título del sidebar con icono
     st.markdown("<h1 style='text-align: center; color: white; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);'>🌟 Navegación</h1>", unsafe_allow_html=True)
