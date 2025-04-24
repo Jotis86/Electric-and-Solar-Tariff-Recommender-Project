@@ -431,7 +431,7 @@ elif seccion_seleccionada == "Visualizaciones":
     }
     
     # Selección de categoría con botones en lugar de tarjetas
-    st.markdown('<h3 style="color: #333;">Selecciona una Categoría</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 style="color: white;">Selecciona una Categoría</h3>', unsafe_allow_html=True)
     
     # Inicializar estado de sesión para categoría seleccionada
     if 'categoria_seleccionada' not in st.session_state:
