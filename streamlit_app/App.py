@@ -412,7 +412,7 @@ elif seccion_seleccionada == "Visualizaciones":
     """, unsafe_allow_html=True)
 
     # Título con estilo
-    st.markdown('<div class="vis-header"><h2>📊 Visualizaciones Interactivas 📊</h2></div>', unsafe_allow_html=True)
+    #st.markdown('<div class="vis-header"><h2>📊 Visualizaciones Interactivas 📊</h2></div>', unsafe_allow_html=True)
     
     # Introducción
     st.markdown("""
