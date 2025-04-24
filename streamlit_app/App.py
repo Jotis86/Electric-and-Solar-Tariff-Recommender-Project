@@ -4,21 +4,101 @@ import os
 import matplotlib.pyplot as plt
 
 
+# Configuración de la página
+st.set_page_config(
+    page_title="Recomendador Energético",
+    page_icon="⚡",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Estilos personalizados globales
+st.markdown("""
+<style>
+    /* Estilos globales */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    html, body, [class*="css"] {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    /* Estilo para el banner principal */
+    .banner {
+        background: linear-gradient(135deg, #1e5799 0%, #207cca 51%, #2989d8 100%);
+        color: white;
+        padding: 2rem 1rem;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .banner h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .banner p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    
+    /* Estilos para las secciones */
+    .section-header {
+        border-left: 4px solid #2989d8;
+        padding-left: 10px;
+        margin: 2rem 0 1rem 0;
+    }
+    
+    /* Estilos para el sidebar */
+    .sidebar .sidebar-content {
+        background-image: linear-gradient(180deg, #2e7bcf 0%, #154277 100%);
+        color: white;
+    }
+    
+    [data-testid=stSidebar] [data-testid=stImage]{
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# Banner personalizado en lugar de imagen
+st.markdown("""
+<div class="banner">
+    <h1>⚡ Recomendador de Tarifas de Luz y Placas Solares ☀️</h1>
+    <p>Ahorra energía y dinero con recomendaciones personalizadas basadas en tus necesidades</p>
+</div>
+""", unsafe_allow_html=True)
+
 # Obtener la ruta absoluta del directorio actual
 current_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Título de la aplicación
-st.title("Recomendador de Tarifas de Luz y Placas Solares")
-
-# Añadir una imagen en la página principal
-st.image(os.path.join(current_dir, "image.jpg"), use_container_width=True)
 
 # Añadir una imagen en la parte superior del menú de navegación
 st.sidebar.image(os.path.join(current_dir, "octocat.jpg"), use_container_width=True)
 
-# Menú de navegación
-st.sidebar.header("Menú de Navegación")
-seccion = st.sidebar.radio("Ir a", ["Introducción", "Objetivos", "Metodología", "Visualizaciones", "Recomendador Tarifas Eléctricas", "Recomendador Placas Solares"])
+# Menú de navegación mejorado
+st.sidebar.markdown("# 🌟 Navegación")
+st.sidebar.markdown("---")
+
+# Opciones de navegación con iconos
+opciones = {
+    "🏠 Inicio": "Introducción",
+    "🎯 Objetivos": "Objetivos",
+    "📊 Metodología": "Metodología",
+    "📈 Visualizaciones": "Visualizaciones",
+    "💡 Tarifas Eléctricas": "Recomendador Tarifas Eléctricas",
+    "☀️ Placas Solares": "Recomendador Placas Solares"
+}
+
+seccion = st.sidebar.radio("", list(opciones.keys()), key="nav")
+seccion_seleccionada = opciones[seccion]
+
+# Información adicional en el sidebar
+st.sidebar.markdown("---")
+st.sidebar.info("Desarrollado con ❤️ usando Streamlit")
 
 # Sección de Introducción
 if seccion == "Introducción":
