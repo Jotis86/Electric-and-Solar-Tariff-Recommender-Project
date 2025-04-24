@@ -851,15 +851,131 @@ elif seccion_seleccionada == "Recomendador Tarifas Eléctricas":
 
 # Sección de Recomendador Solar
 elif seccion_seleccionada == "Recomendador Placas Solares":
-    st.header("Recomendador Placas Solares")
+    # CSS adicional para esta sección (mismo estilo que la anterior)
+    st.markdown("""
+    <style>
+        /* Tarjetas para las diferentes secciones */
+        .form-section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Iconos de sección */
+        .section-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #2989d8;
+        }
+        
+        /* Títulos de sección */
+        .section-title {
+            color: #1e5799;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        
+        /* Notas informativas */
+        .info-note {
+            background: #f0f7ff;
+            border-left: 4px solid #2989d8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        /* Pasos del proceso */
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .step-number {
+            background: #2989d8;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        /* Asegurar contraste en todos los textos */
+        .form-section p, .form-section div:not(.step-number):not(.section-icon):not(.section-title) {
+            color: #333; 
+        }
+        
+        .info-note p {
+            color: #333;
+        }
+        
+        .process-step div:not(.step-number) {
+            color: #333;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
-    st.write("""
-    🌞 **¡Bienvenido al Recomendador de Placas Solares!** 🌞
-
-    Por favor, complete el siguiente formulario para recibir recomendaciones personalizadas sobre la instalación de placas solares en su hogar. 💡🔋
-
-    **¡Hagamos un mundo más sostenible juntos!** 🌍✨
-    """)
+    # Header principal con iconos - Estilo como en la sección anterior
+    st.markdown("""
+    <div class="graph-explanation" style="background: #e8f4fc; border-left: 4px solid #2989d8; padding: 15px 20px 15px 25px; margin-bottom: 30px;">
+        <h3 style="color: #1e5799; margin-left: 10px;">☀️ Recomendador de Placas Solares 🔋</h3>
+        <p style="color: #333; margin-left: 10px;">Encuentra la instalación solar ideal para tu hogar y maximiza tu ahorro energético</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Introducción en columnas para mejor presentación
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        st.markdown("""
+        <div class="form-section">
+            <div class="section-title">¿Cómo funciona?</div>
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div>Proporciónanos información sobre tu ubicación y espacio disponible</div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div>Nuestro algoritmo calcula la radiación solar según tu zona</div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div>Recibe recomendaciones sobre número y tipo de placas solares</div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div>Conoce el ahorro estimado y tiempo de amortización</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with col2:
+        st.markdown("""
+        <div class="form-section" style="text-align: center;">
+            <div class="section-icon">☀️</div>
+            <p style="font-size: 1.2rem; font-weight: 500; color: #1e5799;">Reduce hasta un 70%</p>
+            <p style="color: #333;">tu factura energética con energía solar</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Nota informativa sobre datos necesarios
+    st.markdown("""
+    <div class="info-note">
+        <p style="color: #333;"><strong>📝 Para obtener los mejores resultados</strong></p>
+        <p style="color: #333;">Necesitaremos algunos datos sobre tu ubicación, espacio disponible y consumo eléctrico. Con estos datos podremos recomendarte la instalación solar más eficiente.</p>
+    </div>
+    """, unsafe_allow_html=True)
 
     # Diccionario de meses y días
     dias_por_mes = {
