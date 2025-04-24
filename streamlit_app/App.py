@@ -612,14 +612,27 @@ elif seccion_seleccionada == "Recomendador Tarifas Eléctricas":
             font-weight: bold;
             font-size: 0.8rem;
         }
+        
+        /* Asegurar contraste en todos los textos */
+        .form-section p, .form-section div:not(.step-number):not(.section-icon):not(.section-title) {
+            color: #333; 
+        }
+        
+        .info-note p {
+            color: #333;
+        }
+        
+        .process-step div:not(.step-number) {
+            color: #333;
+        }
     </style>
     """, unsafe_allow_html=True)
 
-    # Header principal con iconos
+    # Header principal con iconos - Estilo como en la sección anterior
     st.markdown("""
-    <div class="recomendador-header">
-        <h1>💡 Recomendador de Tarifas Eléctricas ⚡</h1>
-        <p>Encuentra la tarifa que mejor se adapta a tus necesidades y ahorra en tu factura de luz</p>
+    <div class="graph-explanation" style="background: #e8f4fc; border-left: 4px solid #2989d8;">
+        <h3 style="color: #1e5799;">💡 Recomendador de Tarifas Eléctricas ⚡</h3>
+        <p style="color: #333;">Encuentra la tarifa que mejor se adapta a tus necesidades y ahorra en tu factura de luz</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -654,15 +667,15 @@ elif seccion_seleccionada == "Recomendador Tarifas Eléctricas":
         <div class="form-section" style="text-align: center;">
             <div class="section-icon">💰</div>
             <p style="font-size: 1.2rem; font-weight: 500; color: #1e5799;">Ahorra hasta un 30%</p>
-            <p>en tu factura de luz eligiendo la tarifa correcta</p>
+            <p style="color: #333;">en tu factura de luz eligiendo la tarifa correcta</p>
         </div>
         """, unsafe_allow_html=True)
     
     # Nota informativa sobre datos necesarios
     st.markdown("""
     <div class="info-note">
-        <p><strong>📝 Para obtener los mejores resultados</strong></p>
-        <p>Necesitaremos algunos datos sobre tu consumo eléctrico. Si no conoces algún dato, te ayudaremos a estimarlo.</p>
+        <p style="color: #333;"><strong>📝 Para obtener los mejores resultados</strong></p>
+        <p style="color: #333;">Necesitaremos algunos datos sobre tu consumo eléctrico. Si no conoces algún dato, te ayudaremos a estimarlo.</p>
     </div>
     """, unsafe_allow_html=True)
 
