@@ -150,6 +150,7 @@ if seccion_seleccionada == "Inicio":
             background: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            color: #333; /* Color oscuro para el texto en tarjetas con fondo blanco */
         }
         .card:hover {
             transform: translateY(-5px);
@@ -165,6 +166,9 @@ if seccion_seleccionada == "Inicio":
             margin-bottom: 10px;
             color: #2989d8;
         }
+        .card p, .card ul, .card li {
+            color: #333; /* Asegura que todo texto en las tarjetas sea oscuro */
+        }
         .step-box {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             border-radius: 8px;
@@ -172,6 +176,7 @@ if seccion_seleccionada == "Inicio":
             margin: 10px 0;
             display: flex;
             align-items: center;
+            color: #333; /* Texto oscuro para contraste */
         }
         .step-number {
             background: #2989d8;
@@ -190,6 +195,7 @@ if seccion_seleccionada == "Inicio":
             border-radius: 10px;
             padding: 25px;
             margin: 20px 0;
+            color: #333; /* Texto oscuro para contraste */
         }
         h2 {
             color: #1e5799;
@@ -197,11 +203,19 @@ if seccion_seleccionada == "Inicio":
             padding-bottom: 8px;
             margin-bottom: 20px;
         }
+        /* Asegurando que el texto en el sidebar sea visible */
+        [data-testid=stSidebar] [data-testid=stMarkdown] {
+            color: white !important;
+        }
+        /* Ajustar color de texto en secciones específicas */
+        .stApp p, .stApp ul, .stApp li {
+            color: #333;
+        }
     </style>
     """, unsafe_allow_html=True)
 
     # Encabezado principal
-    st.markdown("<h2>⚡ Recomendador de Tarifas de Luz y Placas Solares</h2>", unsafe_allow_html=True)
+    #st.markdown("<h2>⚡ Recomendador de Tarifas de Luz y Placas Solares</h2>", unsafe_allow_html=True)
     
     # Descripción breve
     st.markdown("""
