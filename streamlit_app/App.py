@@ -251,7 +251,7 @@ if seccion_seleccionada == "Inicio":
         st.markdown("""
         <div class="card">
             <div class="card-icon">☀️</div>
-            <div class="card-title">Independencia Energética</div>
+            <div class="card-title">Independencia</div>
             <p>Genera tu propia energía y reduce la dependencia de compañías eléctricas con placas solares.</p>
         </div>
         """, unsafe_allow_html=True)
