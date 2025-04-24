@@ -459,6 +459,17 @@ elif seccion_seleccionada == "Visualizaciones":
     
     # Selección de gráfico con un estilo mejorado
     st.subheader("Selecciona un Gráfico")
+
+    # Primero añadir este estilo CSS específico para el selector
+    st.markdown("""
+    <style>
+        /* Estilo específico para el label del selector de gráficos */
+        [data-testid="stSelectbox"] label {
+            color: white !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
     
     # Selector de gráfico con estilo corregido
     grafico_seleccionado = st.selectbox(
