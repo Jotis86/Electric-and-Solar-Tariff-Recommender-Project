@@ -101,7 +101,7 @@ st.sidebar.markdown("---")
 st.sidebar.info("Desarrollado con ❤️ usando Streamlit")
 
 # Sección de Introducción
-if seccion == "Introducción":
+if seccion_seleccionada == "Introducción":
     st.header("Introducción")
     st.write("""
     🌞 **Bienvenido al Recomendador de Tarifas de Luz y Placas Solares** 🌞
@@ -135,7 +135,7 @@ if seccion == "Introducción":
     """)
 
 # Sección de Objetivos
-elif seccion == "Objetivos":
+elif seccion_seleccionada == "Objetivos":
     st.header("Objetivos")
     st.write("""
     🎯 **Objetivos del Proyecto** 🎯
@@ -159,7 +159,7 @@ elif seccion == "Objetivos":
     """)
 
 # Sección de Metodología
-elif seccion == "Metodología":
+elif seccion_seleccionada == "Metodología":
     st.header("🛠️ Metodología del Proyecto 🛠️")
     st.write("""
     En este proyecto, hemos seguido una metodología estructurada para garantizar la precisión y la utilidad de nuestras recomendaciones. A continuación, se detallan los pasos clave que hemos seguido:
@@ -189,7 +189,7 @@ elif seccion == "Metodología":
     """)
 
 # Sección de Visualizaciones
-elif seccion == "Visualizaciones":
+elif seccion_seleccionada == "Visualizaciones":
     st.header("📊 Visualizaciones 📊")
     st.write("""
     Bienvenido a la sección de visualizaciones. Aquí podrás explorar diferentes gráficos que te ayudarán a entender mejor los datos relacionados con las tarifas de luz y la energía solar. 📈📉
@@ -253,7 +253,7 @@ elif seccion == "Visualizaciones":
         st.write("Este gráfico muestra las ciudades con menos horas de sol al año. Las horas de sol son un factor importante a considerar al instalar placas solares. Este gráfico permite identificar las ciudades menos favorables para la instalación de placas solares.")
 
 # Sección de Recomendador
-elif seccion == "Recomendador Tarifas Eléctricas":
+elif seccion_seleccionada == "Recomendador Tarifas Eléctricas":
     st.header("Recomendador Tarifas Eléctricas")
 
     st.write("""
@@ -435,7 +435,7 @@ elif seccion == "Recomendador Tarifas Eléctricas":
 
 
 # Sección de Recomendador Solar
-elif seccion == "Recomendador Placas Solares":
+elif seccion_seleccionada == "Recomendador Placas Solares":
     st.header("Recomendador Placas Solares")
 
     st.write("""
