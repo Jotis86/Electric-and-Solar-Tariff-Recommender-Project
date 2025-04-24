@@ -12,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilos personalizados globales
+# Estilos personalizados globales (parte del código existente)
 st.markdown("""
 <style>
     /* Estilos globales */
@@ -33,28 +33,28 @@ st.markdown("""
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
-    .banner h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-    
-    .banner p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-    }
-    
-    /* Estilos para las secciones */
-    .section-header {
-        border-left: 4px solid #2989d8;
-        padding-left: 10px;
-        margin: 2rem 0 1rem 0;
-    }
-    
     /* Estilos para el sidebar */
-    .sidebar .sidebar-content {
-        background-image: linear-gradient(180deg, #2e7bcf 0%, #154277 100%);
+    [data-testid=stSidebar] {
+        background-image: linear-gradient(135deg, #1e5799 0%, #207cca 51%, #2989d8 100%);
+    }
+    
+    [data-testid=stSidebar] [data-testid=stMarkdown] {
         color: white;
+    }
+    
+    [data-testid=stSidebar] .stRadio label {
+        color: white;
+        font-weight: 500;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 8px;
+        transition: all 0.3s;
+    }
+    
+    [data-testid=stSidebar] .stRadio label:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateX(5px);
     }
     
     [data-testid=stSidebar] [data-testid=stImage]{
@@ -62,43 +62,75 @@ st.markdown("""
         margin-bottom: 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    
+    /* Estilo para el botón de GitHub */
+    .github-button {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        margin-top: 15px;
+        text-align: center;
+        transition: all 0.3s;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .github-button:hover {
+        background-color: #2b2b2b;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        transform: translateY(-2px);
+    }
+    
+    .github-icon {
+        margin-right: 8px;
+    }
 </style>
-""", unsafe_allow_html=True)
-
-# Banner personalizado en lugar de imagen
-st.markdown("""
-<div class="banner">
-    <h1>⚡ Recomendador de Tarifas de Luz y Placas Solares ☀️</h1>
-    <p>Ahorra energía y dinero con recomendaciones personalizadas basadas en tus necesidades</p>
-</div>
 """, unsafe_allow_html=True)
 
 # Obtener la ruta absoluta del directorio actual
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Añadir una imagen en la parte superior del menú de navegación
-st.sidebar.image(os.path.join(current_dir, "octocat.jpg"), use_container_width=True)
+# Contenido del sidebar mejorado
+with st.sidebar:
+    # Logo en la parte superior del sidebar
+    st.image(os.path.join(current_dir, "octocat.jpg"), use_container_width=True)
+    
+    # Título del sidebar con icono
+    st.markdown("<h1 style='text-align: center; color: white; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);'>🌟 Navegación</h1>", unsafe_allow_html=True)
+    
+    # Separador visual
+    st.markdown("<hr style='margin: 15px 0; border: 0; height: 1px; background: rgba(255,255,255,0.3);'>", unsafe_allow_html=True)
+    
+    # Opciones de navegación con iconos
+    opciones = {
+        "🏠 Inicio": "Introducción",
+        "🎯 Objetivos": "Objetivos",
+        "📊 Metodología": "Metodología",
+        "📈 Visualizaciones": "Visualizaciones",
+        "💡 Tarifas Eléctricas": "Recomendador Tarifas Eléctricas",
+        "☀️ Placas Solares": "Recomendador Placas Solares"
+    }
 
-# Menú de navegación mejorado
-st.sidebar.markdown("# 🌟 Navegación")
-st.sidebar.markdown("---")
-
-# Opciones de navegación con iconos
-opciones = {
-    "🏠 Inicio": "Introducción",
-    "🎯 Objetivos": "Objetivos",
-    "📊 Metodología": "Metodología",
-    "📈 Visualizaciones": "Visualizaciones",
-    "💡 Tarifas Eléctricas": "Recomendador Tarifas Eléctricas",
-    "☀️ Placas Solares": "Recomendador Placas Solares"
-}
-
-seccion = st.sidebar.radio("", list(opciones.keys()), key="nav")
-seccion_seleccionada = opciones[seccion]
-
-# Información adicional en el sidebar
-st.sidebar.markdown("---")
-st.sidebar.info("Desarrollado con ❤️ usando Streamlit")
+    seccion = st.radio("", list(opciones.keys()), key="nav")
+    seccion_seleccionada = opciones[seccion]
+    
+    # Separador visual
+    st.markdown("<hr style='margin: 15px 0; border: 0; height: 1px; background: rgba(255,255,255,0.3);'>", unsafe_allow_html=True)
+    
+    # Información adicional
+    st.markdown("<div style='padding: 10px; background-color: rgba(255,255,255,0.1); border-radius: 5px;'><p style='color: white; margin: 0;'>Desarrollado con ❤️ usando Streamlit</p></div>", unsafe_allow_html=True)
+    
+    # Botón de GitHub
+    github_repo_url = "https://github.com/Jotis86/Electric-and-Solar-Tariff-Recommender-Project"
+    st.markdown(f"""
+    <a href="{github_repo_url}" target="_blank" class="github-button">
+        <span class="github-icon">⭐</span> Ver en GitHub
+    </a>
+    """, unsafe_allow_html=True)
 
 # Sección de Introducción
 if seccion_seleccionada == "Introducción":
