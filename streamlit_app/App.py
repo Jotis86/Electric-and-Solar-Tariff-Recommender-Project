@@ -243,7 +243,7 @@ if seccion_seleccionada == "Inicio":
         <div class="card">
             <div class="card-icon">🌍</div>
             <div class="card-title">Sostenibilidad</div>
-            <p>Disminuye tu huella de carbono utilizando energía solar y optimizando tu consumo energético.</p>
+            <p>Disminuye tu huella de carbono utilizando energía solar y optimizando tu consumo.</p>
         </div>
         """, unsafe_allow_html=True)
         
@@ -285,7 +285,7 @@ if seccion_seleccionada == "Inicio":
         <div class="card">
             <div class="card-title">🔌 Para Tarifas Eléctricas</div>
             <ul>
-                <li>Proporciona tu consumo mensual, o la app te calcula el promedio</li>
+                <li>Proporciona tu consumo mensual</li>
                 <li>Indica tu potencia contratada actual</li>
                 <li>Recibe recomendaciones de tarifas que mejor se ajusten a tu perfil</li>
             </ul>
