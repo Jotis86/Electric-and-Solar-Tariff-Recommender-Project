@@ -667,7 +667,7 @@ elif seccion_seleccionada == "Recomendador Tarifas Eléctricas":
         <div class="form-section" style="text-align: center;">
             <div class="section-icon">💰</div>
             <p style="font-size: 1.2rem; font-weight: 500; color: #1e5799;">Ahorra hasta un 30%</p>
-            <p style="color: #333;">en tu factura de luz eligiendo la tarifa correcta</p>
+            <p style="color: #333;">en tu factura de luz eligiendo la tarifa correcta para tus necesidades</p>
         </div>
         """, unsafe_allow_html=True)
     
